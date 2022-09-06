@@ -1,10 +1,13 @@
 public class Cat {
+
     private String nome;
     private Integer idade;
     private String genero;
-    private String dono;
 
-    public Cat(String nome, Integer idade, String genero, String dono) {
+    private Dono dono;
+
+
+    public Cat(String nome, Integer idade, String genero, Dono dono) {
         this.nome = nome;
         this.idade = idade;
         this.genero = genero;
@@ -17,6 +20,14 @@ public class Cat {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public Dono getDono() {
+        return dono;
+    }
+
+    public void setDono(Dono dono) {
+        this.dono = dono;
     }
 
     public Integer getIdade() {
@@ -35,12 +46,8 @@ public class Cat {
         this.genero = genero;
     }
 
-    public String getDono() {
-        return dono;
-    }
 
-    public void setDono(String dono) {
-        this.dono = dono;
-    }
+
 }
-}
+
+
