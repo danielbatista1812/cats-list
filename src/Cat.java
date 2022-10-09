@@ -1,53 +1,17 @@
-public class Cat {
+public class Cat extends Animal {
 
-    private String nome;
-    private Integer idade;
-    private String genero;
+    private boolean fede; // true or false
 
-    private Dono dono;
-
-
-    public Cat(String nome, Integer idade, String genero, Dono dono) {
-        this.nome = nome;
-        this.idade = idade;
-        this.genero = genero;
-        this.dono = dono;
+    public Cat(String nome, Integer idade, String genero, Dono dono, boolean fede) {
+        super(nome, idade, genero, dono);
+        this.fede = fede;
     }
 
-    public String getNome() {
-        return nome;
+    // Aqui eu fiz uma implementação do metodo fazer merda para cat
+    @Override
+    public void fazerMerda(final String tipoDaMerda) {
+        System.out.println(tipoDaMerda);
     }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public Dono getDono() {
-        return dono;
-    }
-
-    public void setDono(Dono dono) {
-        this.dono = dono;
-    }
-
-    public Integer getIdade() {
-        return idade;
-    }
-
-    public void setIdade(Integer idade) {
-        this.idade = idade;
-    }
-
-    public String getGenero() {
-        return genero;
-    }
-
-    public void setGenero(String genero) {
-        this.genero = genero;
-    }
-
-
-
 }
 
 
