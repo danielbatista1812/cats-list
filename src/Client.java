@@ -5,9 +5,15 @@ import java.util.List;
 public class Client {
     public static void main(String[] args) {
 
-        // fazer a mesma coisa pra dog FEITO !
-        // fazer a mensagem do metodo abstrato ser dinamica
-        // passar valor como parametro e imprimi-lo
+        // criar classe bird extendendo de Animal
+        // criar parametro chamado voa do tipo boolean
+        /* O método fazerMerda deve receber o tipo da ave
+        *  Se a ave for tucano, imprimir "ola tucano, lambecano"
+        *  Se a ave for bentivi, imprimir "bentivi" 3 vezes
+        *  Se for pombo, imprimir "pegue pombo"
+        *  Se vor galinha imprimir "pega a galinha"
+        *  Imprimir se a ave voa ou nao
+        *  */
 
 
         Dono dono1 = new Dono();
@@ -28,6 +34,21 @@ public class Client {
         dono3.setEndereco("Rua logo ali 199");
         dono3.setEmail("Euestareilá@broke.com.br");
 
+        List <Bird> birds = new ArrayList<>();
+
+        final Bird bird = new Bird("Narigudo", 5, "Macho", dono2, true,"Tucano");
+        final Bird bird1 = new Bird("Teviu", 2, "Macho", dono1, true,"Bentivi");
+        final Bird bird2 = new Bird("Mané galinha", 3,"Macho", dono3, false,"Galinha");
+        final Bird bird3 = new Bird("Richarlison", 23, "Femea", dono1, false,"Pombo");
+
+        birds.add(bird);
+        birds.add(bird1);
+        birds.add(bird2);
+        birds.add(bird3);
+
+        showBirdsName(birds);
+
+
         List <Dog> dogs = new ArrayList<>();
 
         final Dog dog = new Dog("Bolonhas",4, "Macho", dono1, true, true, false, true);
@@ -38,7 +59,7 @@ public class Client {
         dogs.add(dog1);
         dogs.add(dog2);
 
-        showDogsName(dogs);
+       // showDogsName(dogs);
 
         List <Cat> cats = new ArrayList<>();
 
@@ -54,6 +75,20 @@ public class Client {
 
     }
 
+
+    public static void showBirdsName(final List<Bird> birds){
+        for (Bird bird : birds){
+            System.out.println("Nome do bird: " + bird.getNome());
+            System.out.println("Idade do bird: " + bird.getIdade());
+            System.out.println("Genero do bird: " + bird.getGenero());
+            System.out.println("Dono do bird: " + bird.getDono().getNomeDono());
+            System.out.println("Voa ? " + bird.isVoa());
+
+            bird.fazerMerda("Tucano");
+            System.out.println("---------------");
+
+        }
+    }
     public static void showDogsName(final List<Dog> dogs){
         for (Dog dog : dogs) {
             System.out.println("Nome do dog: " + dog.getNome());

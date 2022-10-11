@@ -45,9 +45,13 @@ public abstract class Animal {
     }
 
     // aqui eu passei o parametro no metodo abstrato
-    public abstract void fazerMerda(String tipoDaMerda);
+    public abstract void fazerMerda(String tipoDaMerda);{
+
+    }
+    }
 
 
 
-}
+
+
 
