@@ -17,26 +17,27 @@ public class Bird extends Animal {
     @Override
     public void fazerMerda(String tipoDaMerda) {
 
-        if ("Tucano".equals(tipo)) {
-            System.out.println("Ola Tucano, lambecano");
-        }
-        if ("Bentivi".equals(tipo)) {
-            for (int i = 0; i < 3; i++) {
-                System.out.println("BENTIVI");
-
-            }
-        }
-        if ("Pombo".equals(tipo)) {
-            System.out.println("Pegue o pombo");
-
-        }
-        if ("Galinha".equals(tipo)){
-            System.out.println("PEGA GALINHA !");
+        switch(tipo){
+            case "Tucano":
+                System.out.println("Ola TUcano, lambecano");
+                break;
+            case "Bentivi":
+                for (int i = 0; i < 3; i++) {
+                    System.out.println("BENTIVI");
+                }
+                break;
+            case "Pombo":
+                System.out.println("Pegue o pombo");
+                break;
+            case "Galinha":
+                System.out.println("Pega galinha");
+                break;
+            default:
+                System.out.println("Tipo não encontrado");
         }
 
 
     }
-
 
 
 }
